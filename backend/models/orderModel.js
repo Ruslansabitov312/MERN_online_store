@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const orderSchema = mongoose.Schema(
   {
     user: {
-      type: mongoose.Schema.Types.Objected,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: 'User',
     },
@@ -20,7 +20,7 @@ const orderSchema = mongoose.Schema(
         },
       },
     ],
-    shippingAdress: {
+    shippingAddress: {
       address: { type: String, required: true },
       city: { type: String, required: true },
       postalCode: { type: String, required: true },
