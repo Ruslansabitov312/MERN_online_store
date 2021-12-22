@@ -21,7 +21,7 @@ const ProductEditScreen = ({ match, history }) => {
   const dispatch = useDispatch()
 
   const productDetails = useSelector((state) => state.productDetails)
-  const { loading, error, user, product } = productDetails
+  const { loading, error, product } = productDetails
 
   useEffect(() => {
     if (!product.name || product._id !== productId) {
@@ -32,7 +32,7 @@ const ProductEditScreen = ({ match, history }) => {
       setImage(product.image)
       setBrand(product.brand)
       setCategory(product.category)
-      setCountInStock(product.setCountInStock)
+      setCountInStock(product.countInSock)
       setDescription(product.description)
     }
   }, [dispatch, history, productId, product])
@@ -45,7 +45,7 @@ const ProductEditScreen = ({ match, history }) => {
   return (
     <>
       <Link to='/admin/productlist' className='btn btn-light my-3'>
-        GoBack
+        Go Back
       </Link>
       <FormContainer>
         <h1>Edit Product</h1>
