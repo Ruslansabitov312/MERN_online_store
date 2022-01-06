@@ -161,6 +161,7 @@ export const updateProduct = (product) => async (dispatch, getState) => {
       type: PRODUCT_UPDATE_SUCCESS,
       payload: data,
     })
+    dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data })
   } catch (error) {
     dispatch({
       type: PRODUCT_UPDATE_FAIL,
@@ -206,27 +207,23 @@ export const createProductReview =
     }
   }
 
-export const listTopProducts = () => async (
-  dispatch
-  ) => {
-    try {
-      dispatch({ type: PRODUCT_TOP_REQUEST })
+export const listTopProducts = () => async (dispatch) => {
+  try {
+    dispatch({ type: PRODUCT_TOP_REQUEST })
 
-      const { data } = await axios.get(
-        `/api/products/top`
-      )
+    const { data } = await axios.get(`/api/products/top`)
 
-      dispatch({
-        type: PRODUCT_TOP_SUCCESS,
-        payload: data,
-      })
-    } catch (error) {
-      dispatch({
-        type: PRODUCT_TOP_FAIL,
-        payload:
-          error.response && error.response.data.message
-            ? error.response.data.message
-            : error.message,
-      })
-    }
+    dispatch({
+      type: PRODUCT_TOP_SUCCESS,
+      payload: data,
+    })
+  } catch (error) {
+    dispatch({
+      type: PRODUCT_TOP_FAIL,
+      payload:
+        error.response && error.response.data.message
+          ? error.response.data.message
+          : error.message,
+    })
   }
+}
