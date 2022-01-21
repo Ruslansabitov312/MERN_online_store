@@ -17,14 +17,14 @@ const Navigation = () => {
             <Nav.Link href='/'>Главная</Nav.Link>
 
             <NavDropdown title='Категории' id='collasible-nav-dropdown'>
-              <NavDropdown.Item href='#'>Оружия</NavDropdown.Item>
-              <NavDropdown.Item href='#'>Аксессуары</NavDropdown.Item>
-              <NavDropdown.Item href='#'>Патроны</NavDropdown.Item>
+              <NavDropdown.Item href='#1.1'>Оружия</NavDropdown.Item>
+              <NavDropdown.Item href='#1.2'>Аксессуары</NavDropdown.Item>
+              <NavDropdown.Item href='#1.3'>Патроны</NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title='О магазине' id='collasible-nav-dropdown'>
-              <NavDropdown.Item href='#'>О нас</NavDropdown.Item>
-              <NavDropdown.Item href='#'>Контакты</NavDropdown.Item>
+              <NavDropdown.Item href='#2.1'>О нас</NavDropdown.Item>
+              <NavDropdown.Item href='#2.2'>Контакты</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href='#pricing'>TODO</Nav.Link>
           </Nav>
