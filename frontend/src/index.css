@@ -50,7 +50,17 @@ h2 {
   margin: 0 auto;
 }
 
-@media (max-width: 900px) {
+#Navigation  {
+    border-top: 1px solid rgb(109, 107, 107) !important;
+    color: #fff !important;
+    padding: 0.5rem 1rem;
+}
+
+.nav-item{
+  margin-right: 0 !important;
+}
+
+  @media (max-width: 900px) {
   .carousel-caption h2 {
     font-size: 2.5vw;
   }
