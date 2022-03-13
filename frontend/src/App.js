@@ -13,13 +13,11 @@ import UserListScreen from './screens/UserListScreen'
 import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
-import Navigation from './components/Navigation'
 
 const App = () => {
   return (
     <Router>
       <Header />
-      <Navigation />
       <main className='py-3'>
         <Container>
           <Route path='/login' component={LoginScreen} />
